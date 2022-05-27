@@ -1,0 +1,63 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch funcaoSoma",
+      "request": "launch",
+      "mainClass": "funcaoSoma",
+      "projectName": "udemy_java_2cefa4aa"
+    },
+    {
+      "type": "java",
+      "name": "Launch funcoes",
+      "request": "launch",
+      "mainClass": "funcoes",
+      "projectName": "udemy_java_2cefa4aa"
+    },
+    {
+      "type": "java",
+      "name": "Launch Strings",
+      "request": "launch",
+      "mainClass": "Strings",
+      "projectName": "udemy_java_2cefa4aa"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch CondicionalTernaria",
+      "request": "launch",
+      "mainClass": "CondicionalTernaria",
+      "projectName": "udemy_java_2cefa4aa"
+    },
+    {
+      "type": "java",
+      "name": "Launch CondicionalWhile",
+      "request": "launch",
+      "mainClass": "CondicionalWhile",
+      "projectName": "udemy_java_2cefa4aa"
+    },
+    {
+      "type": "java",
+      "name": "Launch EstruturaFor",
+      "request": "launch",
+      "mainClass": "EstruturaFor",
+      "projectName": "udemy_java_2cefa4aa"
+    },
+    {
+      "type": "java",
+      "name": "Launch UsoDoDebugger",
+      "request": "launch",
+      "mainClass": "UsoDoDebugger",
+      "projectName": "udemy_java_2cefa4aa"
+    }
+  ]
+}
