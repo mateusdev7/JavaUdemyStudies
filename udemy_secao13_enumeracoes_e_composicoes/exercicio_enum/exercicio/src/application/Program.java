@@ -42,17 +42,17 @@ public class Program {
             System.out.print("Date (DD/MM/YYYY): ");
             Date contractDate = sdf.parse(entrada.next());
             System.out.print("Value per hour: ");
-            double valuePerHor = entrada.nextDouble();
+            double valuePerHour = entrada.nextDouble();
             System.out.print("Duration (hours): ");
             int hours = entrada.nextInt();
-            HourContract contract = new HourContract(contractDate, valuePerHor, hours);
+            HourContract contract = new HourContract(contractDate, valuePerHour, hours);
             worker.addContracts(contract);
         }
 
         System.out.print("\nEnter month and year to calculate income (MM/YYYY): ");
         String monthAndYear = entrada.next();
-        int month = Integer.parseInt(monthAndYear.substring(0, 2));
-        int year = Integer.parseInt(monthAndYear.substring(3));
+        int month = Integer.parseInt(monthAndYear.substring(0, 2)); // Pegar o mês
+        int year = Integer.parseInt(monthAndYear.substring(3)); // Pegar o ano
 
         System.out.println("Name: " + worker.getName());
         System.out.println("Department: " + worker.getDepartament().getName()); // Associando o objeto que está dentro do objeto trabalhador
