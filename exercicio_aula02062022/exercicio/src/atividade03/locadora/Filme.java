@@ -45,7 +45,14 @@ public class Filme {
         sb.append("Codigo do filme: ");
         sb.append(codigoDoFilme + "\n");
         sb.append("Genero do filme: ");
-        sb.append(generoDoFilme + "\n");
+        if(generoDoFilme == 'a') {
+            sb.append("Acao" + "\n");
+        }else if(generoDoFilme == 't') {
+            sb.append("Terror" + "\n");
+        }else if(generoDoFilme == 'd') {
+            sb.append("Drama" + "\n");
+        }
+        sb.append("\n");
         return sb.toString();
     }
 }

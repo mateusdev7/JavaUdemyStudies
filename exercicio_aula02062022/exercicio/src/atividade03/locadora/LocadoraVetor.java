@@ -28,7 +28,7 @@ public class LocadoraVetor {
     public String toString() {
         String resposta = "";
         for(int i = 0; i < this.quantVetor; i++) {
-            resposta += (i+1) + "." + this.vetor[i].toString();
+            resposta += (i+1) + ":\n" + this.vetor[i].toString();
         }
         return resposta;
     }

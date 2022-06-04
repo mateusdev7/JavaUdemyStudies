@@ -57,12 +57,18 @@ public class Principal {
                     case 2:
                         System.out.print("Digite a letra inicial do genero (A: acao; T: terror; D: drama): ");
                         char genero = entrada.next().charAt(0);
-                        System.out.println("A quantidade de filmes do genero " + genero + " vale: " + locadora.totalDeFilmes(genero));
+                        if(genero == 'a') {
+                            System.out.println("A quantidade de filmes do genero Acao vale: " + locadora.totalDeFilmes(genero));
+                        }else if (genero == 't') {
+                            System.out.println("A quantidade de filmes do genero Terror vale: " + locadora.totalDeFilmes(genero));
+                        }else if (genero == 'd') {
+                            System.out.println("A quantidade de filmes do genero Drama vale: " + locadora.totalDeFilmes(genero));
+                        }
                         break;
                     case 3:
-                        System.out.println("Lista dos filmes: ");
+                        System.out.println("====== Lista dos filmes cadastrados ======\n");
                         System.out.println(locadora);
-                        System.out.print("\nDigite o nome do filme que voce deseja excluir");
+                        System.out.print("Digite o nome do filme que voce deseja excluir: ");
                         entrada.nextLine();
                         String tituloDoFilme = entrada.nextLine();
 
