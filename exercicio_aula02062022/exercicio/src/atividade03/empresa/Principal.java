@@ -57,8 +57,11 @@ public class Principal {
                     case 2:
                         System.out.print("Digite a letra inicial do tipo de mercadoria (P: perecivel, N: nao perecivel): ");
                         char mercadoria = entrada.next().charAt(0);
-                        System.out.println("A quantidade de mercadorias do tipo " + mercadoria + " vale: " +
-                                empresa.consultarPorTipoDeMercadoria(mercadoria));
+                        if(mercadoria == 'p') {
+                            System.out.println("A quantidade de mercadorias do tipo perecivei vale: " + empresa.consultarPorTipoDeMercadoria(mercadoria));
+                        }else if(mercadoria == 'n') {
+                            System.out.println("A quantidade de mercadorias do tipo nao perecivel vale: " + empresa.consultarPorTipoDeMercadoria(mercadoria));
+                        }
                         break;
                     case 3:
                         System.out.println("Lista dos vendedores: ");
