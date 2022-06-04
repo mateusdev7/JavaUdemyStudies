@@ -43,21 +43,17 @@ public class LocadoraVetor {
         }
     }
 
-    public boolean removerFilme(String nomeDoFilme) {
+    public boolean removerFilme(String filme) {
         if(this.quantVetor == 0) {
             return false;
         }else {
-            int i = 0;
-            while(i < this.quantVetor && this.vetor[i].getTituloDoFilme() != nomeDoFilme) {
-                i++;
+            for(int i = 0; i < this.quantVetor; i++) {
+                if(this.vetor[i].getTituloDoFilme().equalsIgnoreCase(filme)) {
+                    this.vetor[i] = this.vetor[this.quantVetor - 1];
+                    this.quantVetor--;
+                }
             }
-            if(i == this.quantVetor) {
-                return false;
-            }else {
-                this.vetor[i] = this.vetor[this.quantVetor-1];
-                this.quantVetor--;
-                return true;
-            }
+            return true;
         }
     }
 
