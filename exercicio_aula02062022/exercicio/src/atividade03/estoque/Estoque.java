@@ -63,4 +63,12 @@ public class Estoque {
         }
         return produtos;
     }
+
+    public String toString() {
+        String resposta = "";
+        for(int i = 0; i < this.quantVetor; i++) {
+            resposta += (i+1) + "\n" + this.brinquedosVet[i].toString();
+        }
+        return resposta;
+    }
 }
