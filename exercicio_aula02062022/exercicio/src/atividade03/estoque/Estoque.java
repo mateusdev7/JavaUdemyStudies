@@ -45,19 +45,19 @@ public class Estoque {
         if(!(brinquedosVet.length == 0)) {
             for(int i = 0; i < brinquedosVet.length; i++) {
                 if(brinquedosVet[i].getCodigo() == codigoDoProduto) {
-                    lucro = brinquedosVet[i].getPrecoDeVenda() * brinquedosVet[i].getPrecoDeVenda();
+                    lucro += brinquedosVet[i].getPrecoDeVenda() * brinquedosVet[i].getQuantidadeEmEstoque();
                 }
             }
         }
         return lucro;
     }
 
-    public List<String> consultarProdutos(int estoqueMinimo){
+    public List<String> abaixoEstoqueMinimo(){
         List<String> produtos = new ArrayList<>();
         if(!(brinquedosVet.length == 0)) {
             for(int i = 0; i < brinquedosVet.length; i++) {
-                if(brinquedosVet[i].getEstoqueMinimo() < estoqueMinimo) {
-                    produtos.add(brinquedosVet[i].getDescricao() + " - ");
+                if(brinquedosVet[i].getQuantidadeEmEstoque() < brinquedosVet[i].getEstoqueMinimo()) {
+                    produtos.add(brinquedosVet[i].getDescricao() + ((i > 1) ? " - " : ""));
                 }
             }
         }
