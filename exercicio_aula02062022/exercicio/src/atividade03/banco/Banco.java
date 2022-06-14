@@ -61,20 +61,6 @@ public class Banco {
         return resposta;
     }
 
-    public void excluirConta() {
-        double maiorValor = bancoVet[0].getSaldo();
-        int posicao = 0;
-        for(int i = 0; i < bancoVet.length; i++) {
-            if(bancoVet[i].getSaldo() > maiorValor) {
-                maiorValor = bancoVet[i].getSaldo();
-                posicao = i;
-            }
-        }
-        bancoVet[posicao] = bancoVet[quantVetor - 1];
-        quantVetor--;
-        System.out.println("Conta excluida com sucesso!");
-    }
-
     public String removerConta() {
         String resposta = "";
         double menorValor = bancoVet[0].getSaldo();
@@ -91,19 +77,5 @@ public class Banco {
         }
         resposta = "Conta removida";
         return resposta;
-    }
-
-    public boolean removerPeloNome(String nome) {
-        if(this.quantVetor == 0) {
-            return false;
-        }else {
-            for(int i = 0; i < this.quantVetor; i++) {
-                if(this.bancoVet[i].getNomeDoCliente().equalsIgnoreCase(nome)) {
-                    this.bancoVet[i] = this.bancoVet[this.quantVetor - 1];
-                    this.quantVetor--;
-                }
-            }
-            return true;
-        }
     }
 }
