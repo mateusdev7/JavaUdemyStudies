@@ -76,13 +76,13 @@ public class Empresa {
                     double salario = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
                     double acrescimo = 0.10 * salario;
                     resultado += salario + acrescimo;
-                    lista.add("Nome do funcionário: " + vetorDefuncionarios[i].getNomeDoFuncionario() + "\nR$" + String.format("%.2f", resultado) + "\n");
                 }else if(vetorDefuncionarios[i].getCategoria() == 'G' || vetorDefuncionarios[i].getCategoria() == 'g') {
                     double salario = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
                     double acrescimo = 0.15 * salario;
                     resultado += salario + acrescimo;
-                    lista.add("Nome do funcionário: " + vetorDefuncionarios[i].getNomeDoFuncionario() + "\nR$" + String.format("%.2f", resultado) + "\n");
                 }
+                lista.add("Nome do funcionário: " + vetorDefuncionarios[i].getNomeDoFuncionario() +
+                        "Salário bruto: "+"\nR$" + String.format("%.2f", resultado) + "\n");
             }
         }
         return lista;
