@@ -87,4 +87,25 @@ public class Empresa {
         }
         return lista;
     }
+
+    public String salarioBrutoString() {
+        double resultado = 0.0;
+        String resposta = "";
+        if(!(vetorDefuncionarios.length == 0)){
+            for(int i = 0; i < vetorDefuncionarios.length; i++) {
+                if(vetorDefuncionarios[i].getCategoria() == 'O' || vetorDefuncionarios[i].getCategoria() == 'o') {
+                    double salario = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
+                    double acrescimo = 0.10 * salario;
+                    resultado += salario + acrescimo;
+                }else if(vetorDefuncionarios[i].getCategoria() == 'G' || vetorDefuncionarios[i].getCategoria() == 'g') {
+                    double salario = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
+                    double acrescimo = 0.15 * salario;
+                    resultado += salario + acrescimo;
+                }
+                resposta += "Nome do funcionário: " + vetorDefuncionarios[i].getNomeDoFuncionario() +
+                        "Salário bruto: " + "\nR$" + String.format("%.2f", resultado) + "\n";
+            }
+        }
+        return resposta;
+    }
 }
