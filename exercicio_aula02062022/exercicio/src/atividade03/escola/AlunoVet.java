@@ -85,4 +85,16 @@ public class AlunoVet {
         }
         return nomes;
     }
+
+    public String mediaString() {
+        double media = 0.0;
+        String resposta = "";
+        if(!(alunoVet.length == 0)) {
+            for(int i = 0; i < alunoVet.length; i++) {
+                media = (alunoVet[i].getNota1() + alunoVet[i].getNota2()) / 2;
+                resposta += alunoVet[i].getNomeDoAluno() + " - " + media + "\n";
+            }
+        }
+        return resposta;
+    }
 }

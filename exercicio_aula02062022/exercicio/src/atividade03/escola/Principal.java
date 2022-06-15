@@ -62,7 +62,7 @@ public class Principal {
                         System.out.println(alunoVet.consultarAlunos(notaAluno));
                         break;
                     case 3:
-                        if(alunoVet.getQuantVetor() == 0) {
+                        /*if(alunoVet.getQuantVetor() == 0) {
                             System.out.println("A lista de alunos está vazia");
                         }else {
                             List<String> alunos;
@@ -70,8 +70,8 @@ public class Principal {
                             for(int i = 0; i < alunos.size(); i++) {
                                 System.out.println(alunos.get(i));
                             }
-                        }
-                        System.out.println(alunoVet.media());
+                        }*/
+                        System.out.println(alunoVet.mediaString());
                         break;
                 }
             }
