@@ -65,7 +65,7 @@ public class Banco {
         String resposta = "";
         double menorValor = bancoVet[0].getSaldo();
         int j = 0;
-        while((j < bancoVet.length) && (bancoVet[j].getSaldo() < menorValor)){
+        while((j < bancoVet.length) && (bancoVet[j].getSaldo() > menorValor)){
             j++;
         }
         menorValor = bancoVet[j].getSaldo();

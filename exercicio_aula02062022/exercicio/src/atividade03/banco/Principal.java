@@ -43,7 +43,7 @@ public class Principal {
                             }else {
                                 while(numeroDaConta == vetBanco.getBancoVet(j).getNumeroDaConta()) {
                                     System.out.println("Número da conta já existe no sistema");
-                                    System.out.print("Por favor, insira um novo número da conta: ");
+                                    System.out.print("Por favor, insira um número de conta que não esteja sendo utilizado: ");
                                     numeroDaConta = entrada.nextInt();
                                 }
                             }
