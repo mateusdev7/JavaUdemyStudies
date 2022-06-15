@@ -64,6 +64,19 @@ public class Estoque {
         return produtos;
     }
 
+    public String abaixoEstoqueMinimoString() {
+        String resposta = "";
+        if(!(brinquedosVet.length == 0)) {
+            for(int i = 0; i < brinquedosVet.length; i++) {
+                if(brinquedosVet[i].getQuantidadeEmEstoque() < brinquedosVet[i].getEstoqueMinimo()) {
+                    resposta += brinquedosVet[i].getDescricao() + "\nEstoque: " + brinquedosVet[i].getQuantidadeEmEstoque() +
+                    "\nEstoque minimo: " + brinquedosVet[i].getEstoqueMinimo() + "\n";
+                }
+            }
+        }
+        return resposta;
+    }
+
     public String toString() {
         String resposta = "";
         for(int i = 0; i < this.quantVetor; i++) {

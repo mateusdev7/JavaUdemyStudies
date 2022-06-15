@@ -68,11 +68,11 @@ public class Principal {
                     case 2:
                         System.out.print("Codigo do produto:  ");
                         int codigoDoProduto = entrada.nextInt();
-                        System.out.println("Lucro obtido: ");
+                        System.out.print("Lucro obtido: ");
                         System.out.println("R$" + String.format("%.2f, ", estoque.lucroObtido(codigoDoProduto)));
                         break;
                     case 3:
-                        if(estoque.getQuantVetor() == 0) {
+                        /*if(estoque.getQuantVetor() == 0) {
                             System.out.println("A lista de produtos está vazia");
                         }else {
                             List<String> produtos;
@@ -80,7 +80,8 @@ public class Principal {
                             for(int i = 0; i < produtos.size(); i++) {
                                 System.out.println(produtos.get(i));
                             }
-                        }
+                        }*/
+                        System.out.println(estoque.abaixoEstoqueMinimoString());
                         break;
                 }
             }
