@@ -9,7 +9,7 @@ public class Funcionario {
     }
 
     public Funcionario(String nomeDoFuncionario, double numeroDeHorasTrabalhadas, char categoria) {
-        this.nomeDoFuncionario = nomeDoFuncionario.toUpperCase();
+        this.nomeDoFuncionario = nomeDoFuncionario;
         this.numeroDeHorasTrabalhadas = numeroDeHorasTrabalhadas;
         this.categoria = categoria;
     }

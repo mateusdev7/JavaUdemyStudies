@@ -62,11 +62,12 @@ public class Principal {
                     System.out.println(vetEmpresa.alterarHorasTrabalhadas(nome, novoValor));
                     break;
                 case 3:
-                    List<String> funcionarios;
+                    /*List<String> funcionarios;
                     funcionarios = vetEmpresa.salarioBruto();
                     for(int i = 0; i < funcionarios.size(); i++) {
                         System.out.println(funcionarios.get(i));
-                    }
+                    }*/
+                    System.out.println(vetEmpresa.salarioBrutoString());
                     break;
             }
             mostrarMenu();

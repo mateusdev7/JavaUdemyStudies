@@ -67,45 +67,67 @@ public class Empresa {
         return resposta;
     }
 
+    public String salarioBrutoString() {
+        // Operário
+        double resultadoOperario;
+        double salarioOperario;
+        double acrescimoOperario;
+
+        // Gerente
+        double resultadoGerente;
+        double salarioGerente;
+        double acrescimoGerente;
+        String resposta = "";
+        if(!(vetorDefuncionarios.length == 0)){
+            for(int i = 0; i < vetorDefuncionarios.length; i++) {
+                if(vetorDefuncionarios[i].getCategoria() == 'O' || vetorDefuncionarios[i].getCategoria() == 'o') {
+                    salarioOperario = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
+                    acrescimoOperario = 0.10 * salarioOperario;
+                    resultadoOperario = salarioOperario + acrescimoOperario;
+                    resposta += "Nome do funcionário: " + vetorDefuncionarios[i].getNomeDoFuncionario() +
+                            "\nSalário bruto: " + "R$" + String.format("%.2f", resultadoOperario) + "\n";
+                }else if(vetorDefuncionarios[i].getCategoria() == 'G' || vetorDefuncionarios[i].getCategoria() == 'g') {
+                    salarioGerente = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
+                    acrescimoGerente = 0.15 * salarioGerente;
+                    resultadoGerente = salarioGerente + acrescimoGerente;
+                    resposta += "Nome do funcionário: " + vetorDefuncionarios[i].getNomeDoFuncionario() +
+                            "\nSalário bruto: " + "R$" + String.format("%.2f", resultadoGerente) + "\n";
+                }
+            }
+        }
+        return resposta;
+    }
+
     public List<String> salarioBruto() {
-        double resultado = 0.0;
+        // Operário
+        double resultadoOperario;
+        double salarioOperario;
+        double acrescimoOperario;
+
+        // Gerente
+        double resultadoGerente;
+        double salarioGerente;
+        double acrescimoGerente;
+        String resposta = "";
         List<String> lista = new ArrayList<>();
         if(!(vetorDefuncionarios.length == 0)) {
             for(int i = 0; i < vetorDefuncionarios.length; i++) {
                 if(vetorDefuncionarios[i].getCategoria() == 'O' || vetorDefuncionarios[i].getCategoria() == 'o') {
-                    double salario = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
-                    double acrescimo = 0.10 * salario;
-                    resultado += salario + acrescimo;
+                    salarioOperario = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
+                    acrescimoOperario = 0.10 * salarioOperario;
+                    resultadoOperario = salarioOperario + acrescimoOperario;
+                    lista.add("Nome do funcionário: " + vetorDefuncionarios[i].getNomeDoFuncionario() +
+                            "Salário bruto: "+"\nR$" + String.format("%.2f", resultadoOperario) + "\n");
                 }else if(vetorDefuncionarios[i].getCategoria() == 'G' || vetorDefuncionarios[i].getCategoria() == 'g') {
-                    double salario = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
-                    double acrescimo = 0.15 * salario;
-                    resultado += salario + acrescimo;
+                    salarioGerente = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
+                    acrescimoGerente = 0.15 * salarioGerente;
+                    resultadoGerente = salarioGerente + acrescimoGerente;
+                    lista.add("Nome do funcionário: " + vetorDefuncionarios[i].getNomeDoFuncionario() +
+                            "Salário bruto: "+"\nR$" + String.format("%.2f", resultadoGerente) + "\n");
                 }
-                lista.add("Nome do funcionário: " + vetorDefuncionarios[i].getNomeDoFuncionario() +
-                        "Salário bruto: "+"\nR$" + String.format("%.2f", resultado) + "\n");
             }
         }
         return lista;
     }
 
-    public String salarioBrutoString() {
-        double resultado = 0.0;
-        String resposta = "";
-        if(!(vetorDefuncionarios.length == 0)){
-            for(int i = 0; i < vetorDefuncionarios.length; i++) {
-                if(vetorDefuncionarios[i].getCategoria() == 'O' || vetorDefuncionarios[i].getCategoria() == 'o') {
-                    double salario = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
-                    double acrescimo = 0.10 * salario;
-                    resultado += salario + acrescimo;
-                }else if(vetorDefuncionarios[i].getCategoria() == 'G' || vetorDefuncionarios[i].getCategoria() == 'g') {
-                    double salario = (vetorDefuncionarios[i].getNumeroDeHorasTrabalhadas() / 30) * 112;
-                    double acrescimo = 0.15 * salario;
-                    resultado += salario + acrescimo;
-                }
-                resposta += "Nome do funcionário: " + vetorDefuncionarios[i].getNomeDoFuncionario() +
-                        "Salário bruto: " + "\nR$" + String.format("%.2f", resultado) + "\n";
-            }
-        }
-        return resposta;
-    }
 }
